@@ -1,6 +1,7 @@
 // import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_aplication/resources/resources.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -35,12 +36,9 @@ class _TextFieldsState extends State<Welcome> {
             LayoutId(
                 id: 1,
                 child: Container(
-                  width: 100,
-                  height: 100,
-                  child: Placeholder(
-                    color: Colors.green,
-                  ),
-                )),
+                    child: Image(
+                  image: AssetImage(AllImages.intersect),
+                ))),
             LayoutId(
               id: 2,
               child: Text(
@@ -92,7 +90,7 @@ class Positioned extends MultiChildLayoutDelegate {
   void performLayout(Size size) {
     final text = layoutChild(1, BoxConstraints.loose(size));
 
-    positionChild(1, Offset(size.width / 2 - text.width / 2, size.height / 8));
+    positionChild(1, Offset(size.width / 2 - text.width / 2, size.height / 6));
 
     final textfieldsFirst = layoutChild(2, BoxConstraints.loose(size));
 
@@ -119,5 +117,14 @@ class Positioned extends MultiChildLayoutDelegate {
   @override
   bool shouldRelayout(covariant MultiChildLayoutDelegate oldDelegate) {
     return true;
+  }
+}
+
+class Hui extends StatelessWidget {
+  const Hui({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
