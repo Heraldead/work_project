@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_aplication/main_branch/main_file.dart';
+import 'package:flutter_aplication/bottom_bar/main_file.dart';
+import 'package:flutter_aplication/user_profile/user_profile.dart';
 import 'Login&Reg/signin.dart';
 import 'Login&Reg/signup.dart';
 import 'FirstScreen/welcome.dart';
@@ -16,10 +17,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        '/SignIn': (context) => TextFields(),
+        '/Enter': (context) => TextFieldss(),
         '/Welcome': (context) => Welcome(),
-        '/SignUp': (context) => RegTextFields(),
-        '/Sign_In': (context) => Seconds(),
+        '/Registration': (context) => RegTextFields(),
+        '/Main_Screen': (context) => Seconds(),
       },
       initialRoute: '/Welcome',
       debugShowCheckedModeBanner: false,

@@ -12,11 +12,11 @@ class Welcome extends StatefulWidget {
 
 class _TextFieldsState extends State<Welcome> {
   void signUp() {
-    Navigator.of(context).pushNamed('/SignIn');
+    Navigator.of(context).pushNamed('/Registration');
   }
 
   signin() {
-    Navigator.of(context).pushNamed('/SignUp');
+    Navigator.of(context).pushNamed('/Enter');
   }
 
   bool answer = true;
@@ -56,7 +56,7 @@ class _TextFieldsState extends State<Welcome> {
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
                             Color.fromARGB(250, 247, 103, 78))),
-                    onPressed: signUp,
+                    onPressed: signin,
                     child: Text('Get started'),
                   )),
             ),
@@ -66,7 +66,7 @@ class _TextFieldsState extends State<Welcome> {
                   width: 346,
                   height: 36,
                   child: TextButton(
-                    onPressed: signin,
+                    onPressed: signUp,
                     child: Text(
                       'Join the ecosystem',
                       style: TextStyle(

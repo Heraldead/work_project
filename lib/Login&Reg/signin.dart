@@ -1,22 +1,16 @@
-// import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication/resources/resources.dart';
 
-class TextFields extends StatefulWidget {
-  const TextFields({Key? key}) : super(key: key);
+class TextFieldss extends StatefulWidget {
+  const TextFieldss({Key? key}) : super(key: key);
 
   @override
   _TextFieldsState createState() => _TextFieldsState();
 }
 
-class _TextFieldsState extends State<TextFields> {
-  void signUp() {
-    Navigator.of(context).pushReplacementNamed('/SignUp');
-  }
-
-  void signIn() {
-    Navigator.of(context).pushReplacementNamed('/Sign_In');
+class _TextFieldsState extends State<TextFieldss> {
+  main_screen() {
+    Navigator.of(context).pushReplacementNamed('/Main_Screen');
   }
 
   bool answer = true;
@@ -40,7 +34,7 @@ class _TextFieldsState extends State<TextFields> {
                 id: 1,
                 child: Container(
                     child: Image(
-                  image: AssetImage(AllImages.logo),
+                  image: AssetImage(AllImages.loo),
                 ))),
             LayoutId(
               id: 2,
@@ -88,26 +82,13 @@ class _TextFieldsState extends State<TextFields> {
                       backgroundColor: MaterialStateProperty.all(
                           Color.fromARGB(255, 247, 103, 78)),
                     ),
-                    onPressed: signIn,
+                    onPressed: main_screen,
                     child: Text(
-                      'Sign In',
+                      'Welcome',
                       style: TextStyle(color: Colors.white),
                     ),
                   )),
             ),
-            // LayoutId(
-            //   id: 5,
-            //   child: Container(
-            //       width: 120,
-            //       height: 36,
-            //       child: TextButton(
-            //         onPressed: signUp,
-            //         child: Text(
-            //           'Sign Up',
-            //           style: TextStyle(color: Colors.black),
-            //         ),
-            //       )),
-            // ),
           ],
         ),
       ),

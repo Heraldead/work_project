@@ -1,6 +1,5 @@
-// import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_aplication/resources/resources.dart';
 
 class RegTextFields extends StatefulWidget {
   const RegTextFields({Key? key}) : super(key: key);
@@ -11,7 +10,7 @@ class RegTextFields extends StatefulWidget {
 
 class _TextFieldsState extends State<RegTextFields> {
   signin() {
-    Navigator.of(context).pushNamed('/SignIn');
+    Navigator.of(context).pushNamed('/Enter');
   }
 
   bool answer = true;
@@ -25,23 +24,17 @@ class _TextFieldsState extends State<RegTextFields> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey,
+        backgroundColor: Color.fromARGB(250, 247, 103, 78),
       ),
       body: Container(
         child: CustomMultiChildLayout(
           delegate: Positioned(),
           children: [
             LayoutId(
-              id: 1,
-              child: Text(
-                'Sign Up',
-                style: TextStyle(
-                  decoration: TextDecoration.underline,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
+                id: 1,
+                child: Image(
+                  image: AssetImage(AllImages.oG),
+                )),
             LayoutId(
               id: 2,
               child: Container(
@@ -145,7 +138,7 @@ class _TextFieldsState extends State<RegTextFields> {
                   child: TextButton(
                     onPressed: signin,
                     child: Text(
-                      'Sign In',
+                      'Sign Up',
                       style: TextStyle(color: Colors.black),
                     ),
                   )),
@@ -160,8 +153,8 @@ class _TextFieldsState extends State<RegTextFields> {
 class Positioned extends MultiChildLayoutDelegate {
   @override
   void performLayout(Size size) {
-    final text = layoutChild(1, BoxConstraints.loose(size));
-    positionChild(1, Offset(size.width / 2 - text.width / 2, size.height / 8));
+    final text = layoutChild(1, BoxConstraints.loose(Size(150, 150)));
+    positionChild(1, Offset(size.width / 2 - text.width / 2, size.height / 15));
 
     final username = layoutChild(2, BoxConstraints.loose(size));
     positionChild(
