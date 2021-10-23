@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_aplication/main_branch/main_file.dart';
 import 'Login&Reg/signin.dart';
 import 'Login&Reg/signup.dart';
 import 'FirstScreen/welcome.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/SignIn': (context) => TextFields(),
         '/Welcome': (context) => Welcome(),
         '/SignUp': (context) => RegTextFields(),
+        '/Sign_In': (context) => Seconds(),
       },
       initialRoute: '/Welcome',
       debugShowCheckedModeBanner: false,

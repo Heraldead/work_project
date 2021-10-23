@@ -132,7 +132,7 @@ class _TextFieldsState extends State<RegTextFields> {
                     ),
                     onPressed: () {},
                     child: Text(
-                      'Sign Up',
+                      'Sign In',
                       style: TextStyle(color: Colors.white),
                     ),
                   )),
