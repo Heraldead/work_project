@@ -4,6 +4,7 @@ class AllImages {
   AllImages._();
 
   static const String bastion = 'images/bastion.png';
+  static const String cat = 'images/cat.png';
   static const String green = 'images/green.png';
   static const String greenhouse = 'images/greenhouse.png';
   static const String loo = 'images/loo.png';

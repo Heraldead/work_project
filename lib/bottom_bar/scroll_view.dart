@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication/resources/resources.dart';
+// import 'package:gradients/gradients.dart';
 
 class Greenhouse {
+  final int id;
   final String name;
   final String sensor;
   final String description;
 
-  Greenhouse(
-      {required this.name, required this.sensor, required this.description});
+  Greenhouse({
+    required this.id,
+    required this.name,
+    required this.sensor,
+    required this.description,
+  });
 }
 
 class ScrollViewS extends StatefulWidget {
@@ -20,22 +26,27 @@ class ScrollViewS extends StatefulWidget {
 class _ScrollViewSState extends State<ScrollViewS> {
   final _houses = [
     Greenhouse(
+        id: 1,
         name: 'Теплица #A',
         sensor: '3-2-4-0-0',
         description: 'В данной теплице растет гашиш и марихуана'),
     Greenhouse(
+        id: 2,
         name: 'Теплица #B',
         sensor: '2-3-5-0-0',
         description: 'Выращиваются фрукты с Восточной Европы'),
     Greenhouse(
+        id: 3,
         name: 'Теплица #C',
         sensor: '6-0-9-0-17',
         description: 'Растут бананы,яблоки и груши'),
     Greenhouse(
+        id: 4,
         name: 'Теплица #D',
         sensor: '28-0-23-0-1',
         description: 'Растения отобрынные для скрещивания'),
     Greenhouse(
+        id: 5,
         name: 'Теплица #E',
         sensor: '0-3-2-4-0',
         description: 'Селекционные растения'),
@@ -64,9 +75,13 @@ class _ScrollViewSState extends State<ScrollViewS> {
     _searchcontroller.addListener(searchhouses);
   }
 
-  // void _onHouseTap(int index) {
-  //   Navigator.of(context);
-  // }
+  void _onHouseTap(int index) {
+    final id = _houses[index].id;
+    Navigator.of(context).pushNamed(
+      '/Main_Screen/Houses',
+      arguments: id,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -167,7 +182,7 @@ class _ScrollViewSState extends State<ScrollViewS> {
                           color: Colors.transparent,
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
-                            // onTap: () => _onHouseTap(index),
+                            onTap: () => _onHouseTap(index),
                           ),
                         )
                       ],

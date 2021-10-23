@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication/bottom_bar/main_file.dart';
+import 'package:flutter_aplication/full_greenhouse_screen/greenhouse.dart';
 import 'package:flutter_aplication/user_profile/user_profile.dart';
 import 'Login&Reg/signin.dart';
 import 'Login&Reg/signup.dart';
@@ -21,6 +22,14 @@ class MyApp extends StatelessWidget {
         '/Welcome': (context) => Welcome(),
         '/Registration': (context) => RegTextFields(),
         '/Main_Screen': (context) => Seconds(),
+        '/Main_Screen/Houses': (context) {
+          final id = ModalRoute.of(context)?.settings.arguments;
+          if (id is int) {
+            return GreenHouse(id: id);
+          } else {
+            return GreenHouse(id: 0);
+          }
+        },
       },
       initialRoute: '/Welcome',
       debugShowCheckedModeBanner: false,
