@@ -64,129 +64,141 @@ class _ScrollViewSState extends State<ScrollViewS> {
     _searchcontroller.addListener(searchhouses);
   }
 
+  // void _onHouseTap(int index) {
+  //   Navigator.of(context);
+  // }
+
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-          child: ListView.builder(
-              keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-              padding: EdgeInsets.only(top: 60),
-              physics: BouncingScrollPhysics(),
-              itemCount: _filterredhouses.length,
-              itemExtent: 163,
-              itemBuilder: (
-                BuildContext context,
-                int index,
-              ) {
-                final ghouse = _filterredhouses[index];
-                return Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-                  child: Stack(
-                    children: [
-                      Container(
-                        clipBehavior: Clip.hardEdge,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 3,
-                                offset: Offset(3, 3),
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text('GreenHouse')),
+        backgroundColor: Colors.green[600],
+        automaticallyImplyLeading: false,
+      ),
+      body: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            child: ListView.builder(
+                keyboardDismissBehavior:
+                    ScrollViewKeyboardDismissBehavior.onDrag,
+                padding: EdgeInsets.only(top: 60),
+                physics: BouncingScrollPhysics(),
+                itemCount: _filterredhouses.length,
+                itemExtent: 163,
+                itemBuilder: (
+                  BuildContext context,
+                  int index,
+                ) {
+                  final ghouse = _filterredhouses[index];
+                  return Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                    child: Stack(
+                      children: [
+                        Container(
+                          clipBehavior: Clip.hardEdge,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 3,
+                                  offset: Offset(3, 3),
+                                ),
+                              ],
+                              border: Border.all(color: Colors.grey),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 25, vertical: 25),
+                                child:
+                                    Image(image: AssetImage(AllImages.teplica)),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      height: 15,
+                                    ),
+                                    Text(
+                                      ghouse.name,
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 17,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      ghouse.sensor,
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(color: Colors.grey[600]),
+                                    ),
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    Text(
+                                      ghouse.description,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
-                            border: Border.all(color: Colors.grey),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 25, vertical: 25),
-                              child:
-                                  Image(image: AssetImage(AllImages.teplica)),
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    height: 15,
-                                  ),
-                                  Text(
-                                    ghouse.name,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 17,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text(
-                                    ghouse.sensor,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(color: Colors.grey[600]),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    ghouse.description,
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(10),
-                          onTap: () {},
-                        ),
-                      )
-                    ],
+                        Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(10),
+                            // onTap: () => _onHouseTap(index),
+                          ),
+                        )
+                      ],
+                    ),
+                  );
+                }),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 13),
+            child: Container(
+              height: 50,
+              child: TextField(
+                controller: _searchcontroller,
+                textDirection: TextDirection.ltr,
+                decoration: InputDecoration(
+                  hoverColor: Colors.green,
+                  labelText: 'Поиск',
+                  suffixIcon: Icon(Icons.search_outlined),
+                  filled: true,
+                  hintText: 'Поиск теплицы: #name',
+                  hintMaxLines: 1,
+                  fillColor: Colors.white.withAlpha(235),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                );
-              }),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 13),
-          child: Container(
-            height: 50,
-            child: TextField(
-              controller: _searchcontroller,
-              textDirection: TextDirection.ltr,
-              decoration: InputDecoration(
-                hoverColor: Colors.green,
-                labelText: 'Поиск',
-                suffixIcon: Icon(Icons.search_outlined),
-                filled: true,
-                hintText: 'Поиск теплицы: #name',
-                hintMaxLines: 1,
-                fillColor: Colors.white.withAlpha(235),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
