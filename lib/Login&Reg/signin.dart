@@ -42,6 +42,7 @@ class _TextFieldsState extends State<TextFieldss> {
                 width: 346,
                 height: 36,
                 child: TextField(
+                  controller: TextEditingController(text: 'Mikail'),
                   decoration: InputDecoration(
                     labelText: 'Email',
                     suffixIcon: Icon(Icons.email_outlined),
@@ -56,6 +57,7 @@ class _TextFieldsState extends State<TextFieldss> {
                 width: 346,
                 height: 36,
                 child: TextField(
+                  controller: TextEditingController(text: '823231'),
                   obscureText: answer,
                   decoration: InputDecoration(
                     labelText: 'Password',
