@@ -53,7 +53,7 @@ class _ProfileState extends State<Profile> {
                     SizedBox(
                       height: 10.0,
                     ),
-                    Text('Erza Scarlet',
+                    Text('Микаил Тайсунов',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20.0,
@@ -62,7 +62,7 @@ class _ProfileState extends State<Profile> {
                       height: 10.0,
                     ),
                     Text(
-                      'S Class Mage',
+                      'Ведущий эксперт',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 15.0,
@@ -87,7 +87,7 @@ class _ProfileState extends State<Profile> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Information",
+                                      "Информация",
                                       style: TextStyle(
                                         fontSize: 17.0,
                                         fontWeight: FontWeight.w800,
@@ -113,7 +113,7 @@ class _ProfileState extends State<Profile> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              "Guild",
+                                              "Все теплицы",
                                               style: TextStyle(
                                                 fontSize: 15.0,
                                               ),
@@ -149,7 +149,7 @@ class _ProfileState extends State<Profile> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              "Magic",
+                                              "Лучшее",
                                               style: TextStyle(
                                                 fontSize: 15.0,
                                               ),
@@ -185,7 +185,7 @@ class _ProfileState extends State<Profile> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              "Loves",
+                                              "Закрепленные",
                                               style: TextStyle(
                                                 fontSize: 15.0,
                                               ),
@@ -221,7 +221,7 @@ class _ProfileState extends State<Profile> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              "Team",
+                                              "Команда",
                                               style: TextStyle(
                                                 fontSize: 15.0,
                                               ),
@@ -258,7 +258,7 @@ class _ProfileState extends State<Profile> {
                         child: Column(
                       children: [
                         Text(
-                          'Battles',
+                          'Ошибки',
                           style: TextStyle(
                               color: Colors.grey[400], fontSize: 14.0),
                         ),
@@ -276,7 +276,7 @@ class _ProfileState extends State<Profile> {
                     Container(
                       child: Column(children: [
                         Text(
-                          'Birthday',
+                          'Дата рождения',
                           style: TextStyle(
                               color: Colors.grey[400], fontSize: 14.0),
                         ),
@@ -284,7 +284,7 @@ class _ProfileState extends State<Profile> {
                           height: 5.0,
                         ),
                         Text(
-                          'April 7th',
+                          '16 апрель',
                           style: TextStyle(
                             fontSize: 15.0,
                           ),
@@ -295,7 +295,7 @@ class _ProfileState extends State<Profile> {
                         child: Column(
                       children: [
                         Text(
-                          'Age',
+                          'Возраст',
                           style: TextStyle(
                               color: Colors.grey[400], fontSize: 14.0),
                         ),
@@ -303,7 +303,7 @@ class _ProfileState extends State<Profile> {
                           height: 5.0,
                         ),
                         Text(
-                          '19 yrs',
+                          '19 ',
                           style: TextStyle(
                             fontSize: 15.0,
                           ),

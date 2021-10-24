@@ -11,28 +11,27 @@ class GreenHouseChart_second extends StatefulWidget {
 
 class _GreenHouseChartState extends State<GreenHouseChart_second> {
   final List<SalesData> chartData = [
-    SalesData(1, 00),
-    SalesData(2, 01),
-    SalesData(23, 02),
-    SalesData(12, 03),
-    SalesData(12, 04),
-    SalesData(27, 05),
-    SalesData(45, 06),
-    SalesData(8, 07),
-    SalesData(9, 08),
-    SalesData(10, 08),
-    SalesData(11, 10),
-    SalesData(12, 11),
-    SalesData(13, 12),
-    SalesData(14, 13),
-    SalesData(34, 14),
-    SalesData(63, 15),
-    SalesData(17, 16),
-    SalesData(18, 17),
-    SalesData(19, 18),
-    SalesData(20, 19),
-    SalesData(21, 20),
-    SalesData(22, 21),
+    SalesData(1, 52),
+    SalesData(2, 60),
+    SalesData(3, 70),
+    SalesData(4, 32),
+    SalesData(5, 32),
+    SalesData(6, 42),
+    SalesData(7, 23),
+    SalesData(8, 28),
+    SalesData(9, 2),
+    SalesData(10, 21),
+    SalesData(11, 22),
+    SalesData(12, 84),
+    SalesData(13, 35),
+    SalesData(14, 31),
+    SalesData(15, 28),
+    SalesData(16, 34),
+    SalesData(17, 35),
+    SalesData(18, 28),
+    SalesData(19, 34),
+    SalesData(20, 35),
+    SalesData(21, 28),
   ];
   @override
   Widget build(BuildContext context) {
@@ -64,7 +63,7 @@ class SalesData {
   final int temperature;
 
   ///this is Y
-  final int time;
+  final double time;
 
   ///this is X
 }

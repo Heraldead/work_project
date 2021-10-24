@@ -11,20 +11,20 @@ class GreenHouseChart_third extends StatefulWidget {
 
 class _GreenHouseChartState extends State<GreenHouseChart_third> {
   final List<SalesData> chartData = [
-    SalesData(1, 00),
-    SalesData(2, 28),
-    SalesData(3, 34),
-    SalesData(4, 35),
+    SalesData(1, 37),
+    SalesData(2, 12),
+    SalesData(3, 23),
+    SalesData(4, 32),
     SalesData(5, 28),
-    SalesData(6, 34),
-    SalesData(7, 35),
+    SalesData(6, 42),
+    SalesData(7, 23),
     SalesData(8, 28),
     SalesData(9, 34),
     SalesData(10, 35),
     SalesData(11, 28),
     SalesData(12, 34),
     SalesData(13, 35),
-    SalesData(14, 35),
+    SalesData(14, 31),
     SalesData(15, 28),
     SalesData(16, 34),
     SalesData(17, 35),
@@ -64,7 +64,7 @@ class SalesData {
   final int temperature;
 
   ///this is Y
-  final int time;
+  final double time;
 
   ///this is X
 }
