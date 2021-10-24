@@ -28,7 +28,7 @@ class GreenHouseImage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 10),
-            child: Text('Erza Scarlet',
+            child: Text('Теплица #A',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0,

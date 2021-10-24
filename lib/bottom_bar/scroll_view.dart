@@ -101,7 +101,7 @@ class _ScrollViewSState extends State<ScrollViewS> {
                 padding: EdgeInsets.only(top: 60),
                 physics: BouncingScrollPhysics(),
                 itemCount: _filterredhouses.length,
-                itemExtent: 163,
+                itemExtent: 126,
                 itemBuilder: (
                   BuildContext context,
                   int index,
@@ -115,7 +115,8 @@ class _ScrollViewSState extends State<ScrollViewS> {
                         Container(
                           clipBehavior: Clip.hardEdge,
                           decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: Color.fromARGB(255, 202, 244, 250),
+                              // color: Colors.white,
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey,
@@ -130,8 +131,7 @@ class _ScrollViewSState extends State<ScrollViewS> {
                               Padding(
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 25, vertical: 25),
-                                child:
-                                    Image(image: AssetImage(AllImages.teplica)),
+                                child: Image(image: AssetImage(AllImages.list)),
                               ),
                               SizedBox(
                                 width: 20,
